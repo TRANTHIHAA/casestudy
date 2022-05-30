@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+<!--    <div id="logo"><img src="../image/honda-logo.jpg" alt="Lỗi" width="300px" height="98%"></div>-->
+    <div id="login">
+        <form action="menu.html" method="post" onsubmit="return validateFormLogin()">
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td><label><input type="text" name="username" id="username" size="25px"></label></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><label><input type="password" name="password" id="password" size="25px"></label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" name="submit">Login</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+<script >
+    const DEFAULT_USERNAME = "admin";
+    const DEFAULT_PASSWORD = "123456";
+
+    function validateFormLogin() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        if (username !== DEFAULT_USERNAME || password !== DEFAULT_PASSWORD) {
+            alert("Đăng nhập thất bại, mời đăng nhập lại!");
+            return false;
+        } else if (username === DEFAULT_USERNAME && password === DEFAULT_PASSWORD) {
+            localStorage.setItem("username", DEFAULT_USERNAME)
+            alert("Đăng nhập thành công!")
+        }
+    }
+</script>
+</html>

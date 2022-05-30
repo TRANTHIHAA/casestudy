@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 100%;
+            padding-top: 5rem;
+            background-color: white ;
+
+        }
+        .form-signin {
+            max-width: 25rem;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<main class="form-signin">
+    <form id="frm1" method="post">
+        <h1><b>My App</b> Login</h1>
+        <div class="form-floating">
+        <input type="email" placeholder="name@example.com" id="username">
+        <label >Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" id="password" placeholder="Password">
+            <label >Password</label>
+        </div>
+        <button type="submit" onclick="login()"> Login</button>
+    </form>
+</main>
+
+<script src="login.js"></script>
+
+
+</body>
+</html>
